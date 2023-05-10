@@ -1,0 +1,326 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&family=Montserrat&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* Geral */
+
+:root {
+    --cor0: #000000;
+    --cor1: #f0a666;
+    --cor2: #047937;
+    --cor3: #f78a25;
+
+    --fonte-padrao: 'Montserrat', Arial, Verdana, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background:var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+
+span {
+    color: var(--cor3);
+}
+
+/* Cabeçalho */
+
+header {
+    color: white;
+    text-align: center;
+    margin: auto;
+    height: 50vh;
+    position: relative;
+    background-image: url(imagens/background.JPG);
+    background-size: cover;
+    background-position:center;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+div#transp{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
+div#cab {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);       
+}
+
+h1#nome{
+    font-family: 'Allura', cursive;
+    font-size: 4.8em;
+    line-height: 0.7;
+    margin-bottom: 15px;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.24);
+    
+}
+
+
+/* Menu */
+
+nav {
+    background-color: var(--cor0);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.185);
+    text-align: center;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    position: sticky;
+    top: -0.5px;
+    z-index: 9999;
+    
+    
+}
+
+nav > a {
+    font-size: 0.9em;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    border-radius: 5px;
+}
+
+/* Seções */
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;    
+    
+}
+
+section {
+    height: auto;
+}
+
+section.img>div#transpM {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+       
+}
+
+h1#tit {
+    padding: 1em;
+    font-size: 3.5em;
+    font-family: var(--fonte-destaque);
+    color: var(--cor2);
+    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.24);
+}
+
+
+
+
+
+/* Serviços */
+
+section#servicos>div {
+    text-align: center;
+    
+}
+
+section#servicos>div>img:hover {
+    transform: scale(1.2);
+}
+
+section#servicos>div>h2 {
+    font-size: 2em;
+    padding: 0.5em 0em;
+    
+    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.158);
+}
+
+section#servicos>div>p {
+    font-size: 1.4em;
+    padding-bottom: 5em;
+}
+
+section#servicos>div>img {
+    border-radius: 50%;
+    width: 16em;
+    height: 16em;
+}
+
+@media (min-width: 900px) {
+    section#servicos>div {
+        text-align: center;
+        display: inline-block;
+        width: 33%;
+    }
+}
+
+/* Sobre */
+
+section#sobre{
+    background-image: url(imagens/mamahBack.jpg);
+    background-size: cover;
+    background-position:center;
+    
+}
+
+section#sobre>div>p {
+    font-weight: bold;
+    color: white;
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 5em;
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+/* Agende */
+
+section#agende {
+    background-color: white;
+    padding-bottom: 4em;
+    
+}
+
+section#agende>h2 {
+    text-align: center;
+}
+
+section#agende>div#btn{
+    text-align: center;
+    margin: 2em 2em;
+    font-size: 1.7em;
+    line-height: 2em;
+    background-color: var(--cor2);
+    border-radius: 5px;
+    padding: 0.5em;
+    opacity: 0.9;
+
+}
+
+@media (min-width: 900px) {
+    section#agende>div#btn {
+        margin: 2em 8em;
+    }
+}
+section#agende>div#btn>a{
+    text-decoration: none;
+    color: white;  
+
+}
+
+section#agende>div#btn:hover {
+    opacity: 1;
+    transform: scale(1.09);
+}
+
+
+/* Onde estou */
+
+section#onde {
+    background-image: url(imagens/fachada-de-clinica-projeto.jpg);
+    background-size: cover;
+    background-position:center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;   
+
+}
+
+section.img>div.transpO {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5em;    
+}
+
+section#onde>div.transpO>h2 {
+    text-align: center;
+    padding-bottom: 2em;
+
+    
+}
+section#onde>div.transpO>p {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    
+} 
+
+#localicon {
+    font-size: 1.4em;
+}
+#volta {
+    text-align: right;
+}
+#volta>a {
+    text-decoration: none;
+    color: white;
+    background-color: #F89437;
+    text-align: right;
+    border-radius: 15px;
+    padding: 0.5em;
+}
+
+#volta>a:hover {
+    background-color: var(--cor3);
+}
+
+section.img>div.transpO2 {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#redes {
+    text-align: center;
+}
+
+#redes>a {
+    text-decoration: none;
+    font-size: 1.6em;
+    color: white;
+}
+
+#redes>a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
+/* Rodapé */
+
+footer {
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer>a {
+    text-decoration: none;
+    color: white;
+}
+footer>a:hover {
+    text-decoration: underline;
+    color: var(--cor3)
+}
